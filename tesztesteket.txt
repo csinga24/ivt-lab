@@ -1,0 +1,11 @@
+fireTorpedo test
+1. primaryEmpty 
+fireMode = SINGLE, primaryStore.isEmpty() = true, secondaryStore.isEmpty() = false -> firingSuccess = true
+2. primaryAndSecondaryEmpty 
+fireMode = SINGLE, primaryStore.isEmpty() = true, secondaryStore.isEmpty() = true -> firingSuccess = false
+3. AllEmpty
+fireMode = ALL, primaryStore.isEmpty() = true, secondaryStore.isEmpty() = true -> firingSuccess = false
+4. AfterPrimarySuccess
+fireMode = SINGLE, wasPrimaryFiredLast = true, secondaryStore.isEmpty() = false -> firingSuccess = true
+5. AfterPrimarySecondaryEmpty
+fireMode = SINGLE, wasPrimaryFiredLast = true, secondaryStore.isEmpty() = true, primaryStore.isEmpty() = false -> firingSuccess = true
